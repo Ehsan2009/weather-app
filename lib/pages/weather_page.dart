@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:weather_app/models/weather.dart';
+import 'package:weather_app/services/cities.dart';
 import 'package:weather_app/services/weather_service.dart';
 
 class WeatherPage extends StatefulWidget {
@@ -83,7 +84,9 @@ class _WeatherPageState extends State<WeatherPage> {
                 ),
               ),
               const Spacer(),
-              Lottie.asset(getWeatherAnimation(_weather?.mainCondition)),
+              Lottie.asset(
+                getWeatherAnimation(_weather?.mainCondition),
+              ),
               const Spacer(),
               _weather == null
                   ? const CircularProgressIndicator()
@@ -99,6 +102,51 @@ class _WeatherPageState extends State<WeatherPage> {
                     ),
             ],
           ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.white,
+        onPressed: () {
+          showModalBottomSheet(
+            backgroundColor: Colors.deepPurple,
+            context: context,
+            builder: (ctx) {
+              return ListView.builder(
+                itemCount: cities.length,
+                itemBuilder: (ctx, index) {
+                  return GestureDetector(
+                    onTap: () async {
+                      final weather =
+                          await _weatherService.getWeather(cities[index]);
+                      setState(() {
+                        _weather = weather;
+                      });
+                      Navigator.of(context).pop();
+                    },
+                    child: Card(
+                      margin: const EdgeInsets.all(12),
+                      elevation: 10,
+                      child: Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Text(
+                          cities[index],
+                          style: GoogleFonts.abel(
+                              textStyle: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                          )),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              );
+            },
+          );
+        },
+        child: const Icon(
+          Icons.swap_horizontal_circle_sharp,
+          size: 40,
+          color: Colors.black,
         ),
       ),
     );

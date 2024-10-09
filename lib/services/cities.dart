@@ -1,0 +1,23 @@
+List<String> cities = [
+  'New York', 'London', 'Tokyo', 'Paris', 'Beijing',
+  'Los Angeles', 'Dubai', 'Singapore', 'Hong Kong', 'Sydney',
+  'Toronto', 'Berlin', 'Mumbai', 'São Paulo', 'Mexico City',
+  'Moscow', 'Rome', 'Madrid', 'Seoul', 'Istanbul',
+  'Cairo', 'Buenos Aires', 'Bangkok', 'Jakarta', 'Riyadh',
+  'Johannesburg', 'Zurich', 'Amsterdam', 'Barcelona', 'Washington D.C.',
+  'Vienna', 'Milan', 'Shanghai', 'Athens', 'Chicago',
+  'Brussels', 'Frankfurt', 'Melbourne', 'Dublin', 'Kuala Lumpur',
+  'Lisbon', 'Bogota', 'Prague', 'Tel Aviv', 'San Francisco',
+  'Abu Dhabi', 'Vancouver', 'Lima', 'Santiago', 'Budapest',
+  'Warsaw', 'Copenhagen', 'Manila', 'Stockholm', 'Oslo',
+  'Helsinki', 'Brisbane', 'Edinburgh', 'Hamburg', 'Geneva',
+  'Munich', 'St. Petersburg', 'Doha', 'Montreal', 'Havana',
+  'Rio de Janeiro', 'Cape Town', 'Kolkata', 'Chennai', 'Karachi',
+  'Nairobi', 'Perth', 'Ankara', 'Casablanca', 'Copenhagen',
+  'Ho Chi Minh City', 'New Delhi', 'Kyiv', 'Lagos', 'Venice',
+  'Florence', 'Bucharest', 'Cairo', 'Tunis', 'Dar es Salaam',
+  'Algiers', 'Kuwait City', 'Tehran', 'Baghdad', 'Hanoi',
+  'Phnom Penh', 'Bangalore', 'Guangzhou', 'Chengdu', 'Shenzhen',
+  'Bratislava', 'Belgrade', 'Skopje', 'Podgorica', 'Sarajevo',
+  'Tbilisi', 'Yerevan', 'Rabat', 'Porto', 'Luanda'
+];
